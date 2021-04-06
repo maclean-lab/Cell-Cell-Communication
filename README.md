@@ -2,7 +2,7 @@
 
 ### Overview
 
-Multiscale model of the single cell dynamics of the granulocyte-monocyte vs. megakaryocyte-erythrocyte fate decision with cell-cell communication.
+Multiscale model of single cell dynamics of the granulocyte-monocyte vs. megakaryocyte-erythrocyte fate decision with cell-cell communication.
 
 ### Requirements
 

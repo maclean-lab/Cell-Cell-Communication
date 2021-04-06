@@ -7,5 +7,5 @@ Multiscale model of single cell dynamics of the granulocyte-monocyte vs. megakar
 ### Requirements
 
 1. Julia 1.6.0
-2. DifferentialEquations, MultiScaleArrays, Distributions, Plots, DelimitedFiles
+2. DifferentialEquations, Distributions, Plots, DelimitedFiles
 

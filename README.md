@@ -27,3 +27,5 @@ Megan K Franke and Adam L MacLean
 ### References
 
 - V. Chickarmane, T. Enver, C. Peterson, Computational modeling of the hematopoietic erythroid- myeloid switch reveals insights into cooperativity, priming, and irreversibility, *PLoS Comput Biol* 5 (1) (2009) e1000268.
+- J. Bezanson, A. Edelman, S. Karpinski, V. B. Shah, Julia: A fresh approach to numerical computing, *SIAM Review* 59 (1) (2017) 65–98.
+- C. Rackauckas, Q. Nie, Differentialequations.jl–a performant and feature-rich ecosystem for solving differential equations in julia, *Journal of Open Research Software* 5 (1) (2017).

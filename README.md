@@ -2,14 +2,15 @@
 
 ### Summary
 
-Multiscale model of single cell dynamics of the granulocyte-monocyte vs. megakaryocyte-erythrocyte fate decision with cell-cell communication. This hybrid model is implemented in the [Julia](https://julialang.org/) programming language and consists of continuous and discrete processes:
+We provide code associated with the development of hybrid multiscale models of cell-cell communication. The models are developed in [Julia](https://julialang.org/) for a specific gene regulatory network in hematopoiesis that controls myeloid cell fates; however the framework is general and can be applied in various contexts to gene regulatory networks linked to single cell phenotypes. The hybrid model consists of coupled continuous and discrete dynamical processes:
 
-- Continuous intracellular GATA1-PU.1 gene regulatory network dynamics, modeled using the bistable system of ODEs defined in Chickarmane et al. 2009. 
-- Discrete signals sent between cells following a Poisson process
+    - Continuous cell-internal GATA1-PU.1 gene regulatory network dynamics, modeled using nonlinear differential equations as described in Chickarmane et al., 2009. 
+    - Discrete cell-cell communication where signals sent between cells are modeled via a Poisson process.
 
-Cells can send consensus signals, recruiting neighbors to converge to the same lineage, or dissensus signals, pushing neighbors to converge to the opposite lineage. Cell-cell signaling topologies are encoded as a matrix where 1 corresponds to a consensus signal, -1 corresponds to a dissensus signal, and 0 corresponds to no communication. 
+In general, the form of the signal can be defined by the user. Here, we define two signals: consensus signals ("be like me") that recruit neighboring cells to commit to the same lineage, or dissensus signals ("be unlike me") that push neighbors to commit to the alternative lineage. Cell-cell signaling network topologies are defined as a matrix where 1 corresponds to a consensus signal, -1 corresponds to a dissensus signal, and 0 corresponds to no signaling between cells. 
 
-Single trajectory simulations can be performed using Topology_Trajectories.jl. Running large numbers of simulations over a range of parameters can be done without noise using Topology_Probabilities.jl or with noise (either intrinsic or extrinsic) using Simple_Topologies_w_Noise_Probabilities.jl. Large numbers of iterations over many parameter values should not be run locally. The notebook Plotting_Trajectories_and_Probabilities.ipynb plots both single trajectory simulations and approximate probabilities. 
+Simulation of individual model runs (trajectories) is performed in `Topology_Trajectories.jl`. Running sets of simulations over a range of parameters is performed in`Topology_Probabilities.jl` if no noise is modeled, in  or in `Simple_Topologies_w_Noise_Probabilities.jl` with noise (either intrinsic or extrinsic) added. To run large numbers of simulations over many parameter values, we recommend using hpc. The notebook `Plotting_Trajectories_and_Probabilities.ipynb` gives the code used to produce the plots in the paper, both for single trajectory simulations and approximate probability distributions for large sets of parameters.
+
 
 ### Paper
 
@@ -17,12 +18,18 @@ Single trajectory simulations can be performed using Topology_Trajectories.jl. R
 
 Megan K Franke and Adam L MacLean
 
-[https://www.biorxiv.org/content/10.1101/2021.03.31.437948v1]
+bioRxiv: https://www.biorxiv.org/content/10.1101/2021.03.31.437948v1
 
-### Requirements
+doi: https://doi.org/10.1101/2021.03.31.437948
 
-1. Julia 1.6.0
-2. DifferentialEquations, Distributions, Plots, DelimitedFiles, LsqFit
+
+### Dependencies
+
+- [`DifferentialEquations`](https://github.com/SciML/DifferentialEquations.jl) - for differential equation modeling 
+- [`Distributions`](https://github.com/JuliaStats/Distributions.jl) - for probability distributions
+- [`DelimitedFiles`]() - for I/O 
+- [`Plots`](https://github.com/JuliaPlots/Plots.jl), [`LsqFit`](https://github.com/JuliaNLSolvers/LsqFit.jl) for plotting and curve fitting
+
 
 ### References
 

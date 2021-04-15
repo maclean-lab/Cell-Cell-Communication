@@ -9,7 +9,11 @@ We provide code associated with the development of hybrid multiscale models of c
 
 In general, the form of the external signals can be defined by the user. In the paper, we consider two signals: consensus signals ("be like me") that recruit neighboring cells to commit to the same lineage, or dissensus signals ("be unlike me") that push neighbors to commit to the alternative lineage. Cell-cell signaling network topologies are defined by a matrix representation, where: 1 corresponds to a consensus signal; -1 corresponds to a dissensus signal; 0 corresponds to no signaling between cells. 
 
-Simulation of individual model runs (trajectories) is performed in `Topology_Trajectories.jl`. Running sets of simulations over a range of parameters is performed in`Topology_Probabilities.jl` if no noise is modeled, in  or in `Simple_Topologies_w_Noise_Probabilities.jl` with noise (either intrinsic or extrinsic) added. To run large numbers of simulations over many parameter values, we recommend using hpc. The notebook `Plotting_Trajectories_and_Probabilities.ipynb` gives the code used to produce the plots in the paper, both for single trajectory simulations and approximate probability distributions for large sets of parameters.
+To run the model
+- `Topology_Trajectories.jl` - runs simulation of individual model trajectories
+- `Topology_Probabilities.jl` - runs sets of simulations over a range of parameters (no noise added)
+- `Simple_Topologies_w_Noise_Probabilities.jl` runs sets of simulations over a range of parameters with noise (either intrinsic or extrinsic) added. For large runs, we recommend using hpc/cloud resources
+- `Plotting_Trajectories_and_Probabilities.ipynb` gives the code used to produce the plots in the paper, both for single trajectory simulations and approximate probability distributions for large sets of parameters.
 
 
 ### Paper

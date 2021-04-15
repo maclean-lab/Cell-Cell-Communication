@@ -7,10 +7,10 @@ We provide code associated with the development of hybrid multiscale models of c
 - Continuous gene regulatory  dynamics inside cells (GATA1-PU.1 network), modeled with nonlinear differential equations as described previously (Chickarmane et al., 2009). 
 - Discrete cell-cell communication between cells, where signals sent between cells are modeled by a Poisson process.
 
-In general, the form of the external signals can be defined by the user. In the paper, we consider two signals: consensus signals ("be like me") that recruit neighboring cells to commit to the same lineage, or dissensus signals ("be unlike me") that push neighbors to commit to the alternative lineage. Cell-cell signaling network topologies are defined through a matrix representation
-- 1 corresponds to a consensus signal
-- -1 corresponds to a dissensus signal
-- 0 corresponds to no signaling between cells. 
+In general, the form of the external signals can be defined by the user. In the paper, we consider two signals: consensus signals ("be like me") that recruit neighboring cells to commit to the same lineage, or dissensus signals ("be unlike me") that push neighbors to commit to the alternative lineage. Cell-cell signaling network topologies are defined by a matrix representation
+    - 1 corresponds to a consensus signal
+    - -1 corresponds to a dissensus signal
+    - 0 corresponds to no signaling between cells. 
 
 Simulation of individual model runs (trajectories) is performed in `Topology_Trajectories.jl`. Running sets of simulations over a range of parameters is performed in`Topology_Probabilities.jl` if no noise is modeled, in  or in `Simple_Topologies_w_Noise_Probabilities.jl` with noise (either intrinsic or extrinsic) added. To run large numbers of simulations over many parameter values, we recommend using hpc. The notebook `Plotting_Trajectories_and_Probabilities.ipynb` gives the code used to produce the plots in the paper, both for single trajectory simulations and approximate probability distributions for large sets of parameters.
 

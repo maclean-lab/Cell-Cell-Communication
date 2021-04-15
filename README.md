@@ -4,8 +4,8 @@
 
 We provide code associated with the development of hybrid multiscale models of cell-cell communication. The models are developed in [Julia](https://julialang.org/) for a specific gene regulatory network in hematopoiesis that controls myeloid cell fates; however the framework is general and can be applied in various contexts to gene regulatory networks linked to single cell phenotypes. The hybrid model consists of coupled continuous and discrete dynamical processes:
 
-    - Continuous cell-internal GATA1-PU.1 gene regulatory network dynamics, modeled using nonlinear differential equations as described in Chickarmane et al., 2009. 
-    - Discrete cell-cell communication where signals sent between cells are modeled via a Poisson process.
+- Continuous cell-internal GATA1-PU.1 gene regulatory network dynamics, modeled using nonlinear differential equations as described in Chickarmane et al., 2009. 
+- Discrete cell-cell communication where signals sent between cells are modeled via a Poisson process.
 
 In general, the form of the signal can be defined by the user. Here, we define two signals: consensus signals ("be like me") that recruit neighboring cells to commit to the same lineage, or dissensus signals ("be unlike me") that push neighbors to commit to the alternative lineage. Cell-cell signaling network topologies are defined as a matrix where 1 corresponds to a consensus signal, -1 corresponds to a dissensus signal, and 0 corresponds to no signaling between cells. 
 

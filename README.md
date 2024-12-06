@@ -1,4 +1,9 @@
-# Cell-Cell-Communication
+# Analysis of hybrid multiscale models of cell fate influenced by cell-cell communication
+
+### Citation
+Please cite the [paper](https://doi.org/10.1242/dev.199779): 
+
+MK Rommelfanger, AL MacLean (2021), A single-cell resolved cell-cell communication model explains lineage commitment in hematopoiesis. Development, dev.199779. 
 
 ### Summary
 
